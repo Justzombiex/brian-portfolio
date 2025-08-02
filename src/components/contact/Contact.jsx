@@ -40,7 +40,7 @@ const Contact = () => {
       <div className="c-bg" style={{backgroundColor: darkMode && "#c9a0dc",}}></div>
       <div className="c-wrapper">
         <div className="c-left">
-          <h1 className="c-title" style={{color: darkMode && "#c9a0dc",}}>¿Quieres contactarme?</h1>
+          <h1 className="c-title">¿Quieres contactarme?</h1>
           <div className="c-info">
             <div className="c-info-item">
               <img src={phone} alt="Aquí va un ícono" className="c-icon" />
