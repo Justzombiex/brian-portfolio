@@ -7,6 +7,7 @@ import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { useState, useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
+import Github from "../../img/github.svg";
 
 const Contact = () => {
   const formRef = useRef();
@@ -36,10 +37,10 @@ const Contact = () => {
 
   return (
     <div className="c">
-      <div className="c-bg"></div>
+      <div className="c-bg" style={{backgroundColor: darkMode && "#c9a0dc",}}></div>
       <div className="c-wrapper">
         <div className="c-left">
-          <h1 className="c-title">Let's discuss your project</h1>
+          <h1 className="c-title" style={{color: darkMode && "#c9a0dc",}}>¿Quieres contactarme?</h1>
           <div className="c-info">
             <div className="c-info-item">
               <img src={phone} alt="Aquí va un ícono" className="c-icon" />
@@ -51,7 +52,7 @@ const Contact = () => {
             </div>
             <div className="c-info-item">
               <img src={map} alt="Aquí va un ícono" className="c-icon" />
-              -La Habana
+              -Actualmente en La Habana
             </div>
             <div className="c-info-item">
               <img src={Linkedin} alt="Aquí va un ícono" className="c-icon" />
@@ -61,14 +62,25 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="c-link"
               >
-                Visita mi LinkedIn
+                -Visita mi LinkedIn
+              </a>
+            </div>
+            <div className="c-info-item">
+              <img src={Github} alt="GitHub icon" className="c-icon" />
+              <a
+                href="https://github.com/Justzombiex"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="c-link"
+              >
+                -Visita mi GitHub
               </a>
             </div>
           </div>
         </div>
         <div className="c-right">
           <p className="c-desc">
-            <b>¿Tienes alguna pregunta?</b> No dudes en contactarme por correo
+            <b style={{color: darkMode && "#c9a0dc",}}>¿Tienes alguna pregunta?</b> No dudes en contactarme por correo
             electrónico rellenandi el siguiente formulario
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
@@ -100,7 +112,7 @@ const Contact = () => {
               name="message"
               required
             />
-            <button>Enviar</button>
+            <button style={{backgroundColor: darkMode && "#c9a0dc",}}>Enviar</button>
             {done && "Mensaje enviado con éxito"}
           </form>
         </div>

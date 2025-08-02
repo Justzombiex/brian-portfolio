@@ -1,83 +1,74 @@
-/* Layout base para todos los modos */
 .p {
-  width: 22%;
-  margin: 20px 14px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  margin: 16px 8px;
   border-radius: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* 👈 Asegura layout vertical */
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px;
-}
-
-/* Estética modo claro */
-.p-light {
-  background-color: #fefefe;
-  border: 12px solid #e0e0e0;
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    inset 0 0 0 1px #ccc;
-}
-
-.p-light:hover {
-  transform: translateY(-5px);
-  box-shadow:
-    0 12px 24px rgba(0, 0, 0, 0.15),
-    inset 0 0 0 1px #bbb;
-}
-
-/* Estética modo oscuro */
-.p-dark {
-  background-color: #1e1e1e;
-  border: 2px solid #333;
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.4),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-}
-
-.p-dark:hover {
-  transform: translateY(-5px);
-  box-shadow:
-    0 12px 24px rgba(0, 0, 0, 0.6),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  box-sizing: border-box;
 }
 
 /* Imagen */
 .p-img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  max-height: 200px; /* 👈 Limita altura en pantallas pequeñas */
+  object-fit: cover; /* 👈 Recorta sin deformar */
   display: block;
   transition: transform 0.3s ease;
   background-color: white;
   border-radius: 6px;
 }
 
+/* Modo oscuro */
 .p-dark .p-img {
   background-color: #2a2a2a;
 }
 
+/* Hover */
 .p a:hover .p-img {
   transform: scale(1.03);
 }
 
-/* Responsive */
+/* Responsive refinado */
 @media screen and (max-width: 1024px) {
   .p {
-    width: 45%;
+    flex: 1 1 220px;
+    max-width: 280px;
+  }
+
+  .p-img {
+    max-height: 180px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .p {
-    width: 90%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 16px 0;
+    padding: 12px;
+  }
+
+  .p-img {
+    max-height: 160px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .p {
-    width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
     margin: 10px 0;
+    padding: 10px;
+  }
+
+  .p-img {
+    max-height: 140px;
+    border-radius: 4px;
   }
 }

@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-;
 }
 
 .pl-texts {
@@ -28,7 +27,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
 }
 
 /* Responsive */

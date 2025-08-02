@@ -6,7 +6,7 @@ import { ThemeContext } from "../../ThemeContext";
 const Intro = () => {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
-  
+
   return (
     <div className="i">
       <div className="i-left">
@@ -33,7 +33,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="i-right">
-        <div className="i-bg">
+        <div className="i-bg" style={{backgroundColor: darkMode && "#c9a0dc",}}>
           {" "}
           <img
             src={Me}
