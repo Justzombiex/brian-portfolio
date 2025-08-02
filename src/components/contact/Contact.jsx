@@ -48,11 +48,11 @@ const Contact = () => {
             </div>
             <div className="c-info-item">
               <img src={gmail} alt="Aquí va un ícono" className="c-icon" />
-              -bmoralescutting@gmail.com
+              bmoralescutting@gmail.com
             </div>
             <div className="c-info-item">
               <img src={map} alt="Aquí va un ícono" className="c-icon" />
-              -Actualmente en La Habana
+              Actualmente en La Habana
             </div>
             <div className="c-info-item">
               <img src={Linkedin} alt="Aquí va un ícono" className="c-icon" />
@@ -62,7 +62,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="c-link"
               >
-                -Visita mi LinkedIn
+                Visita mi LinkedIn
               </a>
             </div>
             <div className="c-info-item">
@@ -73,7 +73,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="c-link"
               >
-                -Visita mi GitHub
+                Visita mi GitHub
               </a>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Contact = () => {
         <div className="c-right">
           <p className="c-desc">
             <b style={{color: darkMode && "#c9a0dc",}}>¿Tienes alguna pregunta?</b> No dudes en contactarme por correo
-            electrónico rellenandi el siguiente formulario
+            electrónico rellenando el siguiente formulario
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
             <input
