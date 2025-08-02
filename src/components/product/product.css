@@ -1,12 +1,8 @@
+/* Layout base para todos los modos */
 .p {
-  width: 25%;
-  margin: 20px 10px;
+  width: 22%;
+  margin: 20px 14px;
   border-radius: 16px;
-  background-color: #fefefe;
-  border: 12px solid #e0e0e0; /* Marco tipo galería */
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    inset 0 0 0 1px #ccc; /* Línea fina interna */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
@@ -15,13 +11,39 @@
   padding: 10px;
 }
 
-.p:hover {
+/* Estética modo claro */
+.p-light {
+  background-color: #fefefe;
+  border: 12px solid #e0e0e0;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px #ccc;
+}
+
+.p-light:hover {
   transform: translateY(-5px);
   box-shadow:
     0 12px 24px rgba(0, 0, 0, 0.15),
     inset 0 0 0 1px #bbb;
 }
 
+/* Estética modo oscuro */
+.p-dark {
+  background-color: #1e1e1e;
+  border: 2px solid #333;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.p-dark:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Imagen */
 .p-img {
   width: 100%;
   height: auto;
@@ -29,7 +51,11 @@
   display: block;
   transition: transform 0.3s ease;
   background-color: white;
-  border-radius: 6px; /* Opcional: redondeo interno */
+  border-radius: 6px;
+}
+
+.p-dark .p-img {
+  background-color: #2a2a2a;
 }
 
 .p a:hover .p-img {
