@@ -18,10 +18,12 @@ const App = () => {
       }}
     >
       <Toggle />
+      <section className="Scroll">
       <Intro />
       <About />
       <ProductList />
       <Contact />
+      </section>
     </div>
   );
 };

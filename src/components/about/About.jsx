@@ -7,7 +7,7 @@ import Css from "../../img/css.svg";
 import ReactLogo from "../../img/react.svg";
 import Postgres from "../../img/postgresql.svg";
 
-import { FaUsers, FaComments, FaLightbulb } from "react-icons/fa";
+import { FaUsers, FaComments, FaLightbulb, FaTools } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -23,21 +23,19 @@ const About = () => {
         </div>
       </div>
       <div className="a-right">
-        <h1 className="a-title">About me</h1>
+        <h1 className="a-title">Acerca de mí</h1>
         <p className="a-sub">
           Me gusta construir aplicaciones que funcionen bien, se vean limpias y
           resuelvan problemas reales.
         </p>
         <p className="a-desc">
-          <p className="a-desc">
-            Empecé trabajando con sistemas automatizados y protocolos
-            industriales, programando en C# para crear soluciones funcionales.
-            Hoy aplico ese mismo enfoque al desarrollo de software, tanto en
-            backend como en frontend con React. Me gusta escribir código limpio,
-            modular y fácil de entender, y siempre estoy aprendiendo nuevas
-            tecnologías. Actualmente estoy enfocado en React y explorando buenas
-            prácticas en diseño de interfaces y desarrollo web.
-          </p>
+          Empecé trabajando con sistemas automatizados y protocolos
+          industriales, programando en C# para crear soluciones funcionales. Hoy
+          aplico ese mismo enfoque al desarrollo de software, tanto en backend
+          como en frontend con React. Me gusta escribir código limpio, modular y
+          fácil de entender, y siempre estoy aprendiendo nuevas tecnologías.
+          Actualmente estoy enfocado en React y explorando buenas prácticas en
+          diseño de interfaces y desarrollo web.
         </p>
 
         {/* Habilidades técnicas */}
@@ -77,7 +75,11 @@ const About = () => {
             </li>
             <li>
               <FaLightbulb style={{ color: "#ffd700", marginRight: "8px" }} />{" "}
-              Adaptabilidad y resolución de problemas
+              Adaptabilidad
+            </li>
+            <li>
+              <FaTools style={{ color: "#ff6f61", marginRight: "8px" }} />
+              Resolución de problemas
             </li>
           </ul>
         </div>
