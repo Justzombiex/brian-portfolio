@@ -25,7 +25,7 @@ const About = () => {
       <div className="a-right">
         <h1 className="a-title">About me</h1>
         <p className="a-sub">
-          Me gusta construir cosas que funcionen bien, se vean limpias y
+          Me gusta construir aplicaciones que funcionen bien, se vean limpias y
           resuelvan problemas reales.
         </p>
         <p className="a-desc">
