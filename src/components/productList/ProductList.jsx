@@ -1,22 +1,26 @@
 import Product from "../product/Product";
 import "./productList.css";
-import { products } from "../../data";
+import { certifications } from "../../certificationsData";
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
 
 const ProductList = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <div className="pl">
       <div className="pl-texts">
-        <h1 className="pl-title"> Create & inspire. It's Lama</h1>
+        <h1 className="pl-title" style={{color: darkMode && "#c9a0dc",}}>Mis Certificaciones</h1>
         <p className="pl-desc">
-          Lama is a creative portfolio that your work has been waiting Beautiful
-          homes, stunning portfolio styles & a whole lot more inside.
+          Aquí puedes ver algunas de las certificaciones que he obtenido como
+          desarrollador. Haz clic para verlas directamente.
         </p>
       </div>
       <div className="pl-list">
-        {products.map((item)=> (
+        {certifications.map((item) => (
           <Product key={item.id} img={item.img} link={item.link} />
-          ))}
-        
+        ))}
       </div>
     </div>
   );

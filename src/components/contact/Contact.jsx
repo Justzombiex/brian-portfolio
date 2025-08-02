@@ -69,38 +69,38 @@ const Contact = () => {
         <div className="c-right">
           <p className="c-desc">
             <b>¿Tienes alguna pregunta?</b> No dudes en contactarme por correo
-            electrónico o en LinkedIn
+            electrónico rellenandi el siguiente formulario
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
-              placeholder="Name"
+              placeholder="Nombre"
               name="user_name"
               required
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
-              placeholder="Subject"
+              placeholder="Asunto"
               name="user_subject"
               required
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
-              placeholder="Email"
+              placeholder="Correo electrónico"
               name="user_email"
               required
             />
             <textarea
               style={{ backgroundColor: darkMode && "#333" }}
               rows={5}
-              placeholder="Message"
+              placeholder="Mensaje"
               name="message"
               required
             />
-            <button>Submit</button>
+            <button>Enviar</button>
             {done && "Mensaje enviado con éxito"}
           </form>
         </div>

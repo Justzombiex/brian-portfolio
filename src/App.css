@@ -1,3 +1,9 @@
-.Scroll{
-    padding: 80px 0px;
+
+.Scroll hr {
+  border: none;
+  height: 1px;
+  width: 80%;
+  margin: 60px auto;
+  background: linear-gradient(to right, transparent, #4b6cb7, transparent); /* azul suave */
+  opacity: 0.3;
 }

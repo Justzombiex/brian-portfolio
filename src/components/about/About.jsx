@@ -6,10 +6,14 @@ import Html from "../../img/html.svg";
 import Css from "../../img/css.svg";
 import ReactLogo from "../../img/react.svg";
 import Postgres from "../../img/postgresql.svg";
-
+import { useContext } from "react";
+import { ThemeContext } from "../../ThemeContext";
 import { FaUsers, FaComments, FaLightbulb, FaTools } from "react-icons/fa";
 
 const About = () => {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <div className="a">
       <div className="a-left">
@@ -23,7 +27,7 @@ const About = () => {
         </div>
       </div>
       <div className="a-right">
-        <h1 className="a-title">Acerca de mí</h1>
+        <h1 className="a-title" style={{color: darkMode && "#c9a0dc",}}>Acerca de mí</h1>
         <p className="a-sub">
           Me gusta construir aplicaciones que funcionen bien, se vean limpias y
           resuelvan problemas reales.
@@ -40,7 +44,7 @@ const About = () => {
 
         {/* Habilidades técnicas */}
         <div className="a-skills">
-          <h3>Habilidades técnicas</h3>
+          <h3 style={{color: darkMode && "#c9a0dc",}}>Habilidades técnicas</h3>
           <div className="a-icons-row">
             <img src={Cs} alt="C#" title="C#" className="a-tech-icon" />
             <img src={Net} alt=".NET" title=".NET" className="a-tech-icon" />
@@ -63,7 +67,7 @@ const About = () => {
 
         {/* Habilidades blandas */}
         <div className="a-softskills">
-          <h3>Habilidades blandas</h3>
+          <h3 style={{color: darkMode && "#c9a0dc",}}>Habilidades blandas</h3>
           <ul className="a-softskills-list">
             <li>
               <FaComments style={{ color: "#6c63ff", marginRight: "8px" }} />{" "}

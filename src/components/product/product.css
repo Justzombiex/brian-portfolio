@@ -1,41 +1,57 @@
 .p {
-  width: 30%;
-  height: 40vh;
+  width: 25%;
   margin: 20px 10px;
-  border: 2px solid rgb(243, 242, 242);
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 16px;
+  background-color: #fefefe;
+  border: 12px solid #e0e0e0; /* Marco tipo galería */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px #ccc; /* Línea fina interna */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-}
-
-.p-browser {
-  height: 20px;
-  background-color: rgb(243, 242, 242);
   display: flex;
+  justify-content: center;
   align-items: center;
-  position: sticky;
-  z-index: 2;
+  padding: 10px;
 }
 
-.p-circle {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  margin: 3px;
-  background-color: white;
+.p:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px #bbb;
 }
 
 .p-img {
   width: 100%;
-  transition: all 10s ease;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 6px; /* Opcional: redondeo interno */
 }
 
-.p:hover .p-img {
-  transform: translateY(-100%);
+.p a:hover .p-img {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .p {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .p {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .p {
-    width: 40%;
-    height: 20vh;
+    width: 100%;
+    margin: 10px 0;
   }
 }
