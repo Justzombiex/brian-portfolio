@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* 🔧 Contenedor principal: define el layout base */
+.i {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 📄 Sección izquierda (texto) y derecha (imagen) */
+.i-left,
+.i-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+/* 🖥️ Layout para pantallas medianas y grandes */
+@media screen and (min-width: 768px) {
+
+    .i-left,
+    .i-right {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .i {
+        flex-direction: row;
+        height: 100vh;
+    }
+}
+
+/* ✅ Centrado del contenido en la izquierda */
+.i-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ⚠️ Posición relativa en la derecha: necesaria para posicionar elementos internos */
+.i-right {
+    position: relative;
+}
+
+/* 📦 Wrapper del texto: controla el espacio del contenido */
+.i-left-wrapper {
+    padding: 40px;
+    min-height: 100%;
+    /* ⚠️ Este valor puede causar que el texto se corte */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* 📝 Tipografía principal */
+.i-intro {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.i-name {
+    font-size: 60px;
+}
+
+/* 🎬 Animación de títulos */
+.i-title {
+    overflow: visible;
+    height: auto;
+}
+
+.i-title-wrapper {
+    height: 100%;
+    animation: move 10s ease-in-out infinite alternate;
+}
+
+/* 🏷️ Estilo de cada título */
+.i-title-item {
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: #E67E22;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    line-height: 1.3;
+    white-space: normal;
+    /* ✅ Permite que el texto se ajuste */
+}
+
+/* 🖼️ Imagen de fondo */
+.i-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #59b256;
+    border-radius: 50%;
+    /* ✅ Mantiene el círculo */
+    overflow: hidden;
+    width: clamp(300px, 40vw, 500px);
+    height: clamp(300px, 40vw, 500px);
+    margin: auto;
+    position: relative;
+    top: auto;
+    transform: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🖼️ Imagen interna */
+.i-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* 🎨 Colores para tecnologías */
+.net {
+    color: #512bd4;
+}
+
+.react {
+    color: #61dafb;
+}
+
+.html {
+    color: #e34c26;
+}
+
+.css {
+    color: #264de4;
+}
+
+/* 📱 Ajustes para pantallas medianas */
+@media screen and (max-width: 890px) {
+    .i-title-item {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .i-bg {
+        width: 300px;
+        height: 300px;
+        top: auto;
+        transform: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+/* 📱 Ajustes para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .i {
+        flex-direction: column;
+    }
+
+    .i-bg {
+        width: 250px;
+        height: 250px;
+        top: auto;
+        transform: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .i-img {
+        object-fit: cover;
+    }
+
+    .i-left-wrapper {
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        /* ✅ Mejora la adaptabilidad */
+    }
+
+    .i-title-item {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        margin: 8px 0;
+    }
+
+    .i-name {
+        font-size: 2rem;
+    }
+
+    .i-intro {
+        font-size: 1.2rem;
+    }
+
+    .i-desc {
+        font-size: 0.9rem;
+    }
+}
