@@ -101,7 +101,7 @@ const Contact = () => {
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
-              placeholder="Correo electrónico"
+              placeholder="Correo"
               name="user_email"
               required
             />

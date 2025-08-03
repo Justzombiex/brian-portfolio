@@ -48,11 +48,15 @@
     border-radius: 30px;
 }
 
-.a-title {
+.a-title-desktop {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 20px;
 }
+
+.a-title-mobile {
+     display: none;
+    }
 
 .a-sub {
     font-size: 18px;
@@ -125,6 +129,18 @@
     }
 
     .a-right {
+        margin-top: 30px;
+    }
+
+    .a-title-desktop {
+        display: none;
+    }
+
+    .a-title-mobile {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: center;
         margin-top: 30px;
     }
 
