@@ -16,11 +16,12 @@ const About = () => {
 
   return (
     <div className="a">
-      
-      <div className="a-left">
+      {/* Título móvil fuera de a-left */}
       <h1 className="a-title-mobile" style={{ color: darkMode && "#c9a0dc" }}>
-          Acerca de mí
-        </h1>  
+        Acerca de mí
+      </h1>
+
+      <div className="a-left">
         <div className="a-card bg"></div>
         <div className="a-card">
           <img
@@ -30,6 +31,7 @@ const About = () => {
           />
         </div>
       </div>
+
       <div className="a-right">
         <h1
           className="a-title-desktop"
