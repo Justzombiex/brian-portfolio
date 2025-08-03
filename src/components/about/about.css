@@ -114,6 +114,7 @@
 }
 
 /* Responsive */
+/* Modifica estas reglas en tu media query para móviles */
 @media screen and (max-width: 768px) {
     .a {
         flex-direction: column;
@@ -122,13 +123,39 @@
         height: auto;
     }
 
+    .a-left {
+        order: 1; /* Esto coloca el contenedor de las tarjetas después del título */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .a-title-mobile {
+        display: block; /* Asegúrate que es visible */
+        position: relative; /* Necesario para z-index */
+        z-index: 10; /* Mayor que las tarjetas */
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: -40px; /* Ajusta este valor según necesites */
+        text-align: center;
+        width: 100%;
+    }
+
     .a-card,
     .a-card.bg {
         width: 80%;
         height: 40vh;
+        position: relative; /* Cambia de absolute a relative para el diseño móvil */
+        top: auto;
+        left: auto;
+        margin: 0 auto;
+    }
+
+    .a-card.bg {
+        display: none; /* Opcional: puedes ocultar el fondo en móvil si no es necesario */
     }
 
     .a-right {
+        order: 2; /* Esto coloca el contenido de la derecha al final */
         margin-top: 30px;
     }
 
@@ -136,19 +163,5 @@
         display: none;
     }
 
-    .a-title-mobile {
-        font-size: 30px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .a-icons-row {
-        justify-content: center;
-    }
-
-    .a-softskills-list li {
-        justify-content: center;
-    }
+    /* Resto de tus estilos para móvil... */
 }
